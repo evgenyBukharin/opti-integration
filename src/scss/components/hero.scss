@@ -1,2 +1,110 @@
 .hero {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	&__container {
+		display: flex;
+		&-slide {
+			display: flex;
+			flex-direction: column;
+			gap: 60px;
+			border-radius: 25px;
+			background: var(--light-blue-color);
+			max-width: 870px;
+			padding: 25px 0;
+			padding-left: 80px;
+			padding-right: 90px;
+		}
+		&-static {
+			padding: 80px 80px 50px 70px;
+		}
+		&-menu {
+			padding: 30px;
+			border: 1px solid var(--black-color);
+			border-radius: 25px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&-footer {
+			display: flex;
+			justify-content: space-between;
+			gap: 28px;
+		}
+	}
+	&__icon {
+		&-button {
+			margin-left: 75px;
+		}
+		&-wave {
+			align-self: flex-end;
+		}
+	}
+	&__button {
+		&-main {
+			position: relative;
+			padding: 50px 110px;
+			border-radius: 25px;
+			font-weight: 400;
+			font-size: 48px;
+			line-height: 58px;
+			color: var(--white-color);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: -2px;
+				border: 3px solid var(--white-color);
+				border-radius: 25px;
+				background: transparent;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			&:hover {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__title {
+		&-menu {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 29px;
+			margin: 0;
+			margin-bottom: 12px;
+		}
+	}
+	&__list {
+		margin: 0;
+		padding-left: 24px;
+	}
+	&__item {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+	}
+	&__logo {
+		&-footer {
+			margin-bottom: 25px;
+		}
+	}
+	&__social {
+		display: flex;
+		flex-direction: column;
+	}
+	&__link {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: var(--black-color);
+		text-decoration: none;
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+	}
 }
