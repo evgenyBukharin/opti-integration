@@ -1,12 +1,11 @@
 const plusBtn = document.querySelector(".hero__button-plus");
 const minusBtn = document.querySelector(".hero__button-minus");
+const rows = document.querySelectorAll(".hero__container-row");
 let rowsContainer = document.querySelector(".hero__container-rows");
 
 if (plusBtn !== null && rowsContainer !== null) {
 	plusBtn.addEventListener("click", () => {
-		console.log(321);
 		rowsContainer = document.querySelector(".hero__container-rows");
-		const rows = document.querySelectorAll(".hero__container-row");
 		const rowTemplate = rows[rows.length - 1].cloneNode(true);
 		const childred = Array.from(rowTemplate.children);
 		childred.forEach((child) => {
@@ -31,7 +30,8 @@ if (plusBtn !== null && rowsContainer !== null) {
 
 if (minusBtn !== null && rowsContainer !== null) {
 	minusBtn.addEventListener("click", () => {
-		console.log(123);
-		rowsContainer.removeChild(rowsContainer.lastElementChild);
+		if (document.querySelectorAll(".hero__container-row").length > 2) {
+			rowsContainer.removeChild(rowsContainer.lastElementChild);
+		}
 	});
 }
