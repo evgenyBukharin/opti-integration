@@ -30,12 +30,78 @@
 					alt="Логотип компании"
 				/>
 			</div>
-			<div class="hero__container-integration"></div>
+			<div class="hero__container-integration">
+				<h2 class="hero__title hero__title-integration">Настройки интеграции</h2>
+				<div class="hero__container-buttons">
+					<a href="https://tilda.cc/ru/" class="hero__button-tilda">
+						<div class="hero__button-tilda-before">
+							<img
+								loading="lazy"
+								src="./img/logo-tilda.svg"
+								class="image hero__icon-tilda"
+								width="28"
+								height="28"
+								alt="Логотип тильды"
+							/>
+						</div>
+						Открыть тильду
+					</a>
+					<div class="hero__container-input">
+						<input
+							type="text"
+							class="hero__input-text"
+							name="search"
+							id="search"
+							placeholder="Выбрать форму захвата из тильды"
+						/>
+					</div>
+				</div>
+				<h4 class="hero__title hero__title-entity">Выбор сущности</h4>
+				<ul class="list-reset hero__list-checkboxes">
+					<li class="hero__item-checkbox">
+						<label class="hero__label-checkbox" for="deal">
+							<span class="hero__text" data-default-text="Лид" data-future-text="Сделка">Лид</span>
+							<input
+								class="hero__input-checkbox hero__input-checkbox-hidden"
+								type="checkbox"
+								name="deal"
+								id="deal"
+							/>
+						</label>
+					</li>
+					<li class="hero__item-checkbox">
+						<label class="hero__label-checkbox" for="company">
+							<span class="hero__text" data-default-text="Компания" data-future-text="Lorem.">
+								Компания
+							</span>
+							<input
+								class="hero__input-checkbox hero__input-checkbox-hidden"
+								type="checkbox"
+								name="company"
+								id="company"
+							/>
+						</label>
+					</li>
+					<li class="hero__item-checkbox">
+						<label class="hero__label-checkbox" for="contacts">
+							<span class="hero__text" data-default-text="Контакты" data-future-text="Lorem, ipsum.">
+								Контакты
+							</span>
+							<input
+								class="hero__input-checkbox hero__input-checkbox-hidden"
+								type="checkbox"
+								name="contacts"
+								id="contacts"
+							/>
+						</label>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="hero__container-static">
 			<div class="hero__container-menu">
 				<div class="hero__container-header">
-					<h4 class="hero__title-menu">Инструкция</h4>
+					<h4 class="hero__title hero__title-menu">Инструкция</h4>
 					<ol class="hero__list">
 						<li>Нажми на кнопку «Подключить»</li>
 						<li>Нажми на кнопку «Открыть тильду»</li>
