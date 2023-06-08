@@ -79,6 +79,13 @@
 		&-input {
 			position: relative;
 			width: 100%;
+			z-index: 60;
+			&-opened {
+				& > .hero__select {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
 			&::after {
 				content: "";
 				width: 35px;
@@ -86,7 +93,7 @@
 				border-radius: 10px;
 				background: url("../img/bottom-arrow.svg") no-repeat;
 				position: absolute;
-				top: 0px;
+				top: -1px;
 				right: -1px;
 			}
 		}
@@ -104,6 +111,23 @@
 			display: flex;
 			gap: 20px;
 		}
+	}
+	&__select {
+		display: flex;
+		flex-direction: column;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		gap: 4px;
+		padding: 5px 10px 6px;
+		position: absolute;
+		bottom: -89px;
+		left: -2px;
+		right: -2px;
+		background: var(--light-blue-color);
+		z-index: 75;
+		border: 1px solid var(--black-color);
+		border-radius: 10px;
 	}
 	&__icon {
 		&-button {
@@ -240,6 +264,12 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 19px;
+		&-select {
+			padding: 3px 12px;
+			border: 1px solid var(--black-color);
+			border-radius: 8px;
+			background: var(--white-color);
+		}
 	}
 	&__logo {
 		&-footer {
@@ -262,7 +292,7 @@
 	}
 	&__input {
 		&-text {
-			padding: 5px max(60px, 15%);
+			padding: 5px;
 			background: transparent;
 			width: 100%;
 			border: 1px solid var(--black-color);
@@ -273,13 +303,7 @@
 			font-size: 20px;
 			line-height: 24px;
 			max-height: 35px;
-			&::placeholder {
-				font-weight: 400;
-				font-size: 20px;
-				line-height: 24px;
-				color: var(--black-color);
-				opacity: 0.5;
-			}
+			cursor: pointer;
 			&-row {
 				text-align: left;
 				padding: 5px 30px;
@@ -299,6 +323,9 @@
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 24px;
+		&-select {
+			opacity: 0.5;
+		}
 	}
 	&__label {
 		&-checkbox {
